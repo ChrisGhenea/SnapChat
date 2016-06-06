@@ -25,7 +25,7 @@ export default class Dashboard extends Component {
 
   render() {
     return(<View>
-
+      <Camera style ={{flex:1}}/>
       </View>);
   }
 }       
