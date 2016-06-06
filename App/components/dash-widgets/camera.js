@@ -4,7 +4,7 @@ import {
   AppRegistry,
   Dimensions,
   StyleSheet,
-  Text,
+  Image,
   TouchableHighlight,
   View
 } from 'react-native';
@@ -20,7 +20,9 @@ export default class CameraComp extends Component {
           }}
           style={styles.preview}
           aspect={Camera.constants.Aspect.fill}>
-          <Text style={styles.capture} onPress={this.takePicture.bind(this)}>[CAPTURE]</Text>
+          <TouchableHighlight style={styles.capture} style={{flex:1, justifyContent:'flex-end'}} onPress={this.takePicture.bind(this)}>
+          <Image source={require('../../images/capture_icon.png')} style={{width:100, height:100}} resizeMode="contain" />
+          </TouchableHighlight>
         </Camera>
       </View>
     );
