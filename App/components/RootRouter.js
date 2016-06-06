@@ -79,7 +79,7 @@ class RootRouter extends Component {
     if (routeId === 'Splash') {
       return (
         <Splash
-  
+          {...this.props}
           navigator={navigator} />
       );
     }
@@ -103,7 +103,7 @@ class RootRouter extends Component {
 
 }
 export default connect(state => ({
-    state: state.caddy
+    state: state.SnapChat
   }),
   (dispatch) => ({
     actions: bindActionCreators(actions, dispatch)

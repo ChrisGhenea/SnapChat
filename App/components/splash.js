@@ -14,7 +14,7 @@ import {
 export default class Splash extends Component {
 	constructor(props){
 		super(props)
-
+		console.log(this.props)
 	}
 
 	render() {
