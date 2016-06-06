@@ -11,6 +11,12 @@ import {
 import Camera from 'react-native-camera';
 
 export default class CameraComp extends Component {
+  constructor(props){
+    super(props)
+    this.state={
+      captureStyle:{margin:20, width:55, height:55}
+    }
+  }
   render() {
     return (
       <View style={styles.container}>
@@ -20,8 +26,8 @@ export default class CameraComp extends Component {
           }}
           style={styles.preview}
           aspect={Camera.constants.Aspect.fill}>
-          <TouchableHighlight style={styles.capture} style={{flex:1, justifyContent:'flex-end'}} onPress={this.takePicture.bind(this)}>
-          <Image source={require('../../images/capture_icon.png')} style={{width:100, height:100}} resizeMode="contain" />
+          <TouchableHighlight style={styles.capture} style={{flex:1, justifyContent:'flex-end'}} onPressOut={this.pressedOut.bind(this)} onPressIn={this.takePicture.bind(this)}>
+          <Image source={require('../../images/capture_icon.png')} style={this.state.captureStyle} resizeMode="contain" />
           </TouchableHighlight>
         </Camera>
       </View>
@@ -29,11 +35,22 @@ export default class CameraComp extends Component {
   }
 
   takePicture() {
-    this.camera.capture()
+    
+      this.setState({
+captureStyle:{margin:23, width:50, height:50}
+      });
+  }
+
+
+pressedOut(){
+  this.camera.capture()
       .then((data) => console.log(data))
       .catch(err => console.error(err));
-  }
-}
+
+      this.setState({
+captureStyle:{margin:20, width:55, height:55}
+      });
+}}
 
 const styles = StyleSheet.create({
   container: {
