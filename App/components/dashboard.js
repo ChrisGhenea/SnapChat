@@ -5,12 +5,19 @@ import React, {
   Component,
 } from 'react';
 
+import CameraTopBar from "./dash-widgets/camera-top"
+import CameraBottomBar from "./dash-widgets/camera-bottom"
+import PictureBottomBar from "./dash-widgets/picture-bottom"
+import PictureTopBar from "./dash-widgets/picture-top"
+import Camera from "./dash-widgets/camera"
+import Picture from "./dash-widgets/picture"
+
 import {
   View,
   Text
 } from 'react-native';
 
-class Dashboard extends Component {
+export default class Dashboard extends Component {
   constructor(props){
     super(props)
 
@@ -18,7 +25,7 @@ class Dashboard extends Component {
 
   render() {
     return(<View>
-      <Text>YO</Text>
+
       </View>);
   }
 }       
