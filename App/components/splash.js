@@ -7,7 +7,8 @@ import React, {
 
 import {
   View,
-  Text
+  Text,
+  Image
 } from 'react-native';
 
 export default class Splash extends Component {
@@ -17,8 +18,8 @@ export default class Splash extends Component {
 	}
 
 	render() {
-		return(<View>
-			<Text>YO</Text>
+		return(<View style ={{flex:1, flexDirection:'row', alignItems:'center', justifyContent:'center', backgroundColor:'#fff73f'}}>
+			<Image source={require("../images/logo.png")} style = {{width:300, height:300}}resizeMode="contain" />
 			</View>);
 	}
 }				
