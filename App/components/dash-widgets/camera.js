@@ -16,7 +16,9 @@ export default class CameraComp extends Component {
   constructor(props){
     super(props)
     this.state={
-      captureStyle:{margin:20, alignSelf:'center', width:55, height:55}
+      captureStyle:{margin:15, alignSelf:'center', width:55, height:55},
+      captureType: Camera.constants.Type.back,
+      flashmode: Camera.constants.FlashMode.off
     }
   }
   render() {
@@ -27,29 +29,32 @@ export default class CameraComp extends Component {
             this.camera = cam;
           }}
           style={styles.preview}
-          aspect={Camera.constants.Aspect.fill}>
+          aspect={Camera.constants.Aspect.fill}
+          type={this.state.captureType}
+          flashMode={this.state.flashmode}
+          >
           <View style={{flex:1, justifyContent:'space-between'}}>
 <View style={{flexDirection:'row', height:90, justifyContent:'space-between'}}> 
           <TouchableHighlight style={styles.capture} style={{flex:1,}} >
-          <Icon name="flash" style ={{margin:20, alignSelf:'center'}} size={35} color="#fff" />
+          <Icon name="flash" style ={{margin:20, marginLeft:0, alignSelf:'center'}} size={30} color="#fff" />
             </TouchableHighlight>
-           <TouchableHighlight style={styles.capture} style={{flex:1, }} onPressOut={this.pressedOut.bind(this)} onPressIn={this.takePicture.bind(this)}>
-          <Icon name="snapchat-ghost" style ={{margin:20, alignSelf:'center'}} size={35} color="#fff" />
+           <TouchableHighlight style={styles.capture} style={{flex:1, }} >
+          <Icon name="snapchat-ghost" style ={{margin:20, alignSelf:'center'}} size={30} color="#fff" />
           </TouchableHighlight>
            <TouchableHighlight style={styles.capture} style={{flex:1,}} >
-          <IconI name="ios-reverse-camera-outline" style ={{margin:20, alignSelf:'center'}} size={45} color="#fff" />
+          <IconI name="ios-reverse-camera-outline" style ={{margin:20, alignSelf:'center'}} size={35} color="#fff" />
           </TouchableHighlight>
           </View>
 
           <View style={{flexDirection:'row', height:90, justifyContent:'space-between'}}> 
           <TouchableHighlight style={styles.capture} style={{flex:1,}} >
-            <View style={{width:30, height:30, margin:20, marginLeft:0, alignSelf:'center', borderRadius:5, borderWidth:2, borderColor:'#fff'}}/>
+            <View style={{width:30, height:30, margin:30, marginLeft:0, alignSelf:'center', borderRadius:5, borderWidth:2, borderColor:'#fff'}}/>
             </TouchableHighlight>
            <TouchableHighlight style={styles.capture} style={{flex:1, }} onPressOut={this.pressedOut.bind(this)} onPressIn={this.takePicture.bind(this)}>
           <Image source={require('../../images/capture_icon.png')} style={this.state.captureStyle} resizeMode="contain" />
           </TouchableHighlight>
            <TouchableHighlight style={styles.capture} style={{flex:1,}} >
-          <Icon name="bars" style ={{margin:20, alignSelf:'center'}} size={32} color="#fff" />
+          <Icon name="bars" style ={{margin:30, alignSelf:'center'}} size={32} color="#fff" />
           </TouchableHighlight>
           </View>
           </View>
@@ -61,7 +66,7 @@ export default class CameraComp extends Component {
   takePicture() {
     
       this.setState({
-captureStyle:{margin:23, alignSelf:'center', width:50, height:50}
+captureStyle:{margin:17, alignSelf:'center', width:50, height:50}
       });
   }
 
@@ -72,7 +77,7 @@ pressedOut(){
       .catch(err => console.error(err));
 
       this.setState({
-captureStyle:{margin:20, alignSelf:'center', width:55, height:55}
+captureStyle:{margin:15, alignSelf:'center', width:55, height:55}
       });
 }}
 
