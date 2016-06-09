@@ -11,6 +11,8 @@ import {
 import Camera from 'react-native-camera';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import IconI from 'react-native-vector-icons/Ionicons';
+import BottomBar from './camera-bottom';
+
 
 export default class CameraComp extends Component {
   constructor(props){
@@ -46,16 +48,8 @@ export default class CameraComp extends Component {
           </TouchableHighlight>
           </View>
 
-          <View style={{flexDirection:'row', height:90, justifyContent:'space-between'}}> 
-          <TouchableHighlight style={styles.capture} style={{flex:1,}} >
-            <View style={{width:30, height:30, margin:30, marginLeft:0, alignSelf:'center', borderRadius:5, borderWidth:2, borderColor:'#fff'}}/>
-            </TouchableHighlight>
-           <TouchableHighlight style={styles.capture} style={{flex:1, }} onPressOut={this.pressedOut.bind(this)} onPressIn={this.takePicture.bind(this)}>
-          <Image source={require('../../images/capture_icon.png')} style={this.state.captureStyle} resizeMode="contain" />
-          </TouchableHighlight>
-           <TouchableHighlight style={styles.capture} style={{flex:1,}} >
-          <Icon name="bars" style ={{margin:30, alignSelf:'center'}} size={32} color="#fff" />
-          </TouchableHighlight>
+          <View> 
+          <BottomBar />
           </View>
           </View>
         </Camera>
