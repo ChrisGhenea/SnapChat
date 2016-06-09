@@ -12,6 +12,7 @@ import Camera from 'react-native-camera';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import IconI from 'react-native-vector-icons/Ionicons';
 import BottomBar from './camera-bottom';
+import TopBar from './camera-top';
 
 
 export default class CameraComp extends Component {
@@ -36,17 +37,7 @@ export default class CameraComp extends Component {
           flashMode={this.state.flashmode}
           >
           <View style={{flex:1, justifyContent:'space-between'}}>
-<View style={{flexDirection:'row', height:90, justifyContent:'space-between'}}> 
-          <TouchableHighlight style={styles.capture} style={{flex:1,}} >
-          <Icon name="flash" style ={{margin:20, marginLeft:0, alignSelf:'center'}} size={30} color="#fff" />
-            </TouchableHighlight>
-           <TouchableHighlight style={styles.capture} style={{flex:1, }} >
-          <Icon name="snapchat-ghost" style ={{margin:20, alignSelf:'center'}} size={30} color="#fff" />
-          </TouchableHighlight>
-           <TouchableHighlight style={styles.capture} style={{flex:1,}} >
-          <IconI name="ios-reverse-camera-outline" style ={{margin:20, alignSelf:'center'}} size={35} color="#fff" />
-          </TouchableHighlight>
-          </View>
+          <TopBar />
 
           <View> 
           <BottomBar />

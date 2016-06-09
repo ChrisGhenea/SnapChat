@@ -24,7 +24,7 @@ export default class CameraBottom extends Component {
 
   render() {
     return(<View style={{flexDirection:'row', height:90, justifyContent:'space-between'}}>
-<TouchableHighlight style={{flex: 0, backgroundColor: '#fff', borderRadius: 5, color: '#000', padding: 10, margin: 40 }} style={{flex:1,}} >
+<TouchableHighlight style={{flex: 1, backgroundColor: '#fff', borderRadius: 5, color: '#000', padding: 10, margin: 40 }} style={{flex:1,}} >
             <View style={{width:30, height:30, margin:30, marginLeft:0, alignSelf:'center', borderRadius:5, borderWidth:2, borderColor:'#fff'}}/>
             </TouchableHighlight>
            <TouchableHighlight style={{flex: 0, backgroundColor: '#fff', borderRadius: 5, color: '#000', padding: 10, margin: 40 }} style={{flex:1, }} >
