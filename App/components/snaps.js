@@ -5,12 +5,16 @@ import React, {
   Component,
 } from 'react';
 
+import Holder from "./snaps-Widgets/snap-holder"
+import Nav from "./snaps-Widgets/snap-nav"
+
+
 import {
   View,
   Text
 } from 'react-native';
 
-class Snaps extends Component {
+export default class Snaps extends Component {
 	constructor(props){
 		super(props)
 
@@ -18,7 +22,8 @@ class Snaps extends Component {
 
 	render() {
 		return(<View>
-			<Text>YO</Text>
+			<Nav />
+			<Holder snaps = {this.props}/>
 			</View>);
 	}
 }				
