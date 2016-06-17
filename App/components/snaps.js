@@ -21,9 +21,10 @@ export default class Snaps extends Component {
 	}
 
 	render() {
-		return(<View>
+		return(<View style={{flex:1}}>
 			<Nav />
-			<Holder snaps = {this.props}/>
+			<Holder />
+	
 			</View>);
 	}
 }				

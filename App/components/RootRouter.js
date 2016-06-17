@@ -7,7 +7,8 @@ import React, {
 import {
   View,
   Navigator,
-  Text
+  Text,
+  StatusBar
 } from 'react-native';
 import {Router, Route, Scene, Animations, TabBar} from 'react-native-router-flux';
 
@@ -89,6 +90,9 @@ class RootRouter extends Component {
   render() {
     return (
       <View style={{flex:1}}>
+      <StatusBar
+     barStyle="light-content"
+   />
         <Navigator
         style={{flex: 1}}
         initialRoute={{id: 'Snaps', name: 'Snaps'}}

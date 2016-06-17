@@ -22,7 +22,7 @@ export default class SnapHolder extends Component {
   }
 
   render() {
-    return(<Image source={require('./../../images/snapsBackground.png')} style={{flex:14}} resizeMode="contain">
+    return(<Image source={require('./../../images/snapsBackground.png')} style={{flex:9}} resizeMode="contain">
       
 
       </Image>);
