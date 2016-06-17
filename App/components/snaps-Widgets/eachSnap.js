@@ -64,9 +64,11 @@ export default class SnapHolder extends Component {
 
   render() {
     return(
-      <View style={{flexDirection:'row', flex:1, justifyContent:'space-between'}}>
+      <View style={{flexDirection:'row', flex:1, borderBottomWidth:1, padding:10, borderColor:'#eee',  justifyContent:'space-between'}}>
+     <View style={{flexDirection:'row', flex:1,  justifyContent:'space-between'}}>
      {this.generateImage(this.props.data.dataType)}
-      <Text> {this.props.data.name} </Text>
+      <Text style={{alignSelf:'center'}}> {this.props.data.name} </Text>
+      </View>
 
 
       </View>
@@ -77,8 +79,8 @@ export default class SnapHolder extends Component {
 var styles = StyleSheet.create({
  
   images: {
-    width:30,
-    height:30,
+    width:23,
+    height:23,
     margin:3
   },
 });

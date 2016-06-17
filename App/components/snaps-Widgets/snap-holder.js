@@ -66,6 +66,7 @@ export default class SnapHolder extends Component {
       <Search />
       <ListView
         dataSource={this.state.dataSource}
+        style = {{flex:12}}
         renderRow={(rowData) => <EachSnap data = {rowData} />}
                     />
 
