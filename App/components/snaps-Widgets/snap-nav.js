@@ -23,9 +23,9 @@ export default class SnapNav extends Component {
   render() {
     return(
       <View style={{flex:1, backgroundColor:'#01A588', flexDirection:'row', justifyContent:'space-between'}}>
-      <Image source={require('./../../images/Talkbubble.png')} style={{margin:20}} resizeMode="contain" />
-      <Image source={require('./../../images/snapchat.png')} style={{margin:20}} resizeMode="contain" />
-      <Image source={require('./../../images/cameraicon.png')} style={{margin:20}} resizeMode="contain" />
+      <Image source={require('./../../images/Talkbubble.png')} style={{margin:10, marginTop:25, marginBottom:0,}} resizeMode="contain" />
+      <Image source={require('./../../images/snapchat.png')} style={{margin:10, marginTop:25, marginBottom:0,}} resizeMode="contain" />
+      <Image source={require('./../../images/cameraicon.png')} style={{margin:10, marginTop:25, marginBottom:0,}} resizeMode="contain" />
 
       </View>);
   }
