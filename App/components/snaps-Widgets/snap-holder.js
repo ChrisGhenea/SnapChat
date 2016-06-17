@@ -15,7 +15,7 @@ import {
 } from 'react-native';
 
 import EachSnap from "./eachSnap"
-
+import Search from "./../global-widgets/search-bar"
 
 
 export default class SnapHolder extends Component {
@@ -63,6 +63,7 @@ export default class SnapHolder extends Component {
 
   render() {
     return(<Image source={require('./../../images/snapsBackground.png')} style={{flex:9}} resizeMode="contain">
+      <Search />
       <ListView
         dataSource={this.state.dataSource}
         renderRow={(rowData) => <EachSnap data = {rowData} />}

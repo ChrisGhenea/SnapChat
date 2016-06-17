@@ -10,7 +10,8 @@ import {
   View,
   TouchableHighlight,
   Text,
-  Image
+  Image,
+  StyleSheet,
 } from 'react-native';
 
 
@@ -24,42 +25,61 @@ export default class SnapHolder extends Component {
   generateImage(image){
     if(image == "message"){
       return(
-        <Image source={require('./../../images/blueSquare.png')} />
+        <Image style={styles.images} resizeMode="contain" source={require('./../../images/blueSquare.png')} />
         )
     }
     if(image == "messageLoaded"){
       return(
-        <Image source={require('./../../images/emptyBlueSquare.png')} />
+        <Image style={styles.images} resizeMode="contain" source={require('./../../images/emptyBlueSquare.png')} />
         )
     }
     if(image == "video"){
       return(
-        <Image source={require('./../../images/purpleSquare.png')} />
+        <Image style={styles.images} resizeMode="contain" source={require('./../../images/purpleSquare.png')} />
         )
     }
     if(image == "videoLoaded"){
       return(
-        <Image source={require('./../../images/emptyPurple.png')} />
+        <Image style={styles.images} resizeMode="contain" source={require('./../../images/emptyPurple.png')} />
         )
     }
     if(image == "image"){
       return(
-        <Image source={require('./../../images/redSquare.png')} />
+        <Image style={styles.images} resizeMode="contain" source={require('./../../images/redSquare.png')} />
         )
       
     }if(image == "imageLoaded"){
       return(
-        <Image source={require('./../../images/redSquareEmpty.png')} />
+        <Image style={styles.images} resizeMode="contain" source={require('./../../images/redSquareEmpty.png')} />
         )
       
+    }
+  }
+
+  generateRelationship(val){
+    if(val == 1){
+
     }
   }
 
   render() {
     return(
       <View style={{flexDirection:'row', flex:1, justifyContent:'space-between'}}>
+     {this.generateImage(this.props.data.dataType)}
       <Text> {this.props.data.name} </Text>
+
+
       </View>
       );
   }
-}        
+} 
+
+var styles = StyleSheet.create({
+ 
+  images: {
+    width:30,
+    height:30,
+    margin:3
+  },
+});
+
