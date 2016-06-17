@@ -50,7 +50,7 @@ export default class SnapHolder extends Component {
     {
       name:"Hank Moody",
       opened:true,
-      dataType: "message",
+      dataType: "videoLoaded",
       relationship:3
     },
 
