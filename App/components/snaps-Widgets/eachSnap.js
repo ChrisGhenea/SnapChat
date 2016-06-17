@@ -67,7 +67,7 @@ export default class SnapHolder extends Component {
       <View style={{flexDirection:'row', flex:1, borderBottomWidth:1, padding:10, borderColor:'#eee',  justifyContent:'space-between'}}>
      <View style={{flexDirection:'row', flex:2,  justifyContent:'space-between'}}>
      {this.generateImage(this.props.data.dataType)}
-      <Text style={{alignSelf:'center', textAlign:"right"}}> {this.props.data.name} </Text>
+      <Text style={{alignSelf:'center', textAlign:"right", fontSize:14}}> {this.props.data.name} </Text>
       </View>
       <View style={{flex:2}} />
 
