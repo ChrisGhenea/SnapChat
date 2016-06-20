@@ -5,20 +5,26 @@ import React, {
   Component,
 } from 'react';
 
+import Holder from "./stories-widgets/story-holder"
+import Nav from "./stories-widgets/story-nav"
+
+
 import {
   View,
   Text
 } from 'react-native';
 
-class Stories extends Component {
+export default class Stories extends Component {
 	constructor(props){
 		super(props)
 
 	}
 
 	render() {
-		return(<View>
-			<Text>YO</Text>
+		return(<View style={{flex:1}}>
+			<Nav />
+			<Holder />
+	
 			</View>);
 	}
 }				
