@@ -90,12 +90,10 @@ class RootRouter extends Component {
   render() {
     return (
       <View style={{flex:1}}>
-      <StatusBar
-     barStyle="light-content"
-   />
+      
         <Navigator
         style={{flex: 1}}
-        initialRoute={{id: 'Stories', name: 'Snaps'}}
+        initialRoute={{id: 'Dashboard', name: 'Snaps'}}
           renderScene={this.renderScene.bind(this)}
       /></View>
     );

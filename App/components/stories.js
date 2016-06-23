@@ -3,6 +3,7 @@
 
 import React, {
   Component,
+  StatusBar,
 } from 'react';
 
 import Holder from "./stories-widgets/story-holder"
@@ -22,7 +23,8 @@ export default class Stories extends Component {
 
 	render() {
 		return(<View style={{flex:1}}>
-			<Nav />
+
+			<Nav {...this.props} />
 			<Holder />
 	
 			</View>);

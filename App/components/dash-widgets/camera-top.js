@@ -20,13 +20,14 @@ import IconI from 'react-native-vector-icons/Ionicons';
 export default class CameraTop extends Component {
   constructor(props){
     super(props)
+    console.log(this.props)
 
   }
 
   render() {
     return(<View>
 <View style={{flexDirection:'row', height:90, justifyContent:'space-between'}}> 
-          <TouchableHighlight style={{flex: 1,}} >
+          <TouchableHighlight style={{flex: 1,}}>
           <Icon name="flash" style ={{margin:20, marginLeft:0, alignSelf:'center'}} size={30} color="#fff" />
             </TouchableHighlight>
            <TouchableHighlight style={{flex: 1, }} >

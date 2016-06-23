@@ -18,6 +18,7 @@ import TopBar from './camera-top';
 export default class CameraComp extends Component {
   constructor(props){
     super(props)
+    console.log(this.props);
     this.state={
       captureStyle:{margin:15, alignSelf:'center', width:55, height:55},
       captureType: Camera.constants.Type.back,
@@ -37,10 +38,10 @@ export default class CameraComp extends Component {
           flashMode={this.state.flashmode}
           >
           <View style={{flex:1, justifyContent:'space-between'}}>
-          <TopBar />
+          <TopBar {...this.props}/>
 
           <View> 
-          <BottomBar />
+          <BottomBar {...this.props}/>
           </View>
           </View>
         </Camera>
