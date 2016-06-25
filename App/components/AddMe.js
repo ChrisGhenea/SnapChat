@@ -7,6 +7,7 @@ import React, {
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 import IonIcon from 'react-native-vector-icons/Ionicons';
+import Nav from "./stories-widgets/story-nav"
 
 import {
   View,
@@ -26,13 +27,14 @@ export default class AddMe extends Component {
 	}
 
 	render() {
-		return(<View style={{flex:1, backgroundColor:'#333'}}>
-			<Image source={this.state.addMe} resizeMode="contain" style ={{width:150,height:150}}/>
-			<Text>{this.state.username}</Text>
-			<Text>Score: {this.state.points}</Text>
-			<View style={{flexDirection:'row', margin:10}}><Icon name="android-happy" size={30} color="#fff"/><Text>Added Me</Text></View>
-			<View style={{flexDirection:'row', margin:10}}><Icon name="user-plus" size={30} color="#fff"/><Text>Add Friend</Text></View>
-			<View style={{flexDirection:'row', margin:10}}><IonIcon name="ios-paper-outline" size={30} color="#fff"/><Text>Add Friend</Text></View>
+		return(<View style={{flex:1, backgroundColor:'#000', alignItems:'center'}}>
+			<Nav />
+			<Image source={this.state.addMe} resizeMode="contain" style ={{width:150,height:150, marginTop:50}}/>
+			<Text style={{color:'#fff', }}>{this.state.username}</Text>
+			<Text style={{color:'#fff', fontSize:10}}>Score: {this.state.points}</Text>
+			<View style={{flexDirection:'row', margin:10, alignSelf:'center'}}><Image source={require('./../images/smileYo.png')} resizeMode="contain" style={{margin:10,width:30,height:30}} /><Text style={{color:'#fff', margin:10, alignSelf:'center'}}>Added Me</Text></View>
+			<View style={{flexDirection:'row', margin:10, alignSelf:'center'}}><Image source={require('./../images/addPerson.png')} resizeMode="contain" style={{margin:10,width:30,height:30}} /><Text style={{color:'#fff',margin:10, alignSelf:'center'}}>Add Friend</Text></View>
+			<View style={{flexDirection:'row', margin:10, alignSelf:'center'}}><Image source={require('./../images/friendsAdd.png')} resizeMode="contain" style={{margin:10,width:30,height:30}} /><Text style={{color:'#fff', margin:10, alignSelf:'center'}}>Add Friend</Text></View>
 			</View>);
 	}
 }				
