@@ -67,6 +67,8 @@ export default class StoryHolder extends Component {
     return(<Image source={require('./../../images/snapsBackground.png')} style={{flex:9}} resizeMode="contain">
       <Search />
       <Discover />
+      <Live />
+      <Recent />
 
 
 

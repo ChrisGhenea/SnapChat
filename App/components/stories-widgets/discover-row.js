@@ -9,6 +9,7 @@ import React, {
 import {
   TouchableHighlight,
   ListView,
+  Text,
   View,
   Image,
 } from 'react-native';
@@ -20,40 +21,39 @@ import Search from "./../global-widgets/search-bar"
 
 var count = 0;
 
-export default class StoryHolder extends Component {
+export default class DiscoverRow extends Component {
   constructor(props){
     super(props)
     var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     var storySample = [
     {
-      name:"Amanda Palmer",
-      opened:true,
-      dataType: "message",
-      relationship:1
+      name:"BuzzFeed",
     },
     {
-      name:"Jason Bourne",
-      opened:true,
-      dataType: "message",
-      relationship:2
+      name:"Discover",
     },
     {
-      name:"Hank Moody",
-      opened:true,
-      dataType: "image",
-      relationship:3
+      name:"ESPN",
     },
     {
-      name:"Hank Moody",
-      opened:true,
-      dataType: "image",
-      relationship:3
+      name:"HBO",
     },
     {
-      name:"Hank Moody",
-      opened:true,
-      dataType: "videoLoaded",
-      relationship:3
+      name:"HULU",
+    },{
+      name:"BuzzFeed",
+    },
+    {
+      name:"Discover",
+    },
+    {
+      name:"ESPN",
+    },
+    {
+      name:"HBO",
+    },
+    {
+      name:"HULU",
     },
 
     ]
@@ -65,7 +65,7 @@ export default class StoryHolder extends Component {
 
 
 eachDisc(x){
-  if(count < 6){
+  if(count < 5){
     count++;
   }
     else{
@@ -94,7 +94,9 @@ generateImage(val){
 }
   render() {
     return(
-      <View>
+      <View style={{flex:1}}>
+      <Text style={{color:"#9B55A0", alignSelf:'center', fontSize:12, fontWeight:"600", margin:13}}>
+      DISCOVER </Text>
       <ListView
       dataSource={this.state.dataSource}
       renderRow={(rowData) => this.eachDisc(rowData)}

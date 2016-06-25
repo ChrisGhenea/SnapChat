@@ -93,7 +93,7 @@ class RootRouter extends Component {
       
         <Navigator
         style={{flex: 1}}
-        initialRoute={{id: 'Dashboard', name: 'Snaps'}}
+        initialRoute={{id: 'AddMe', name: 'Snaps'}}
           renderScene={this.renderScene.bind(this)}
       /></View>
     );
