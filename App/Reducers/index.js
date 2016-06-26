@@ -24,6 +24,7 @@ export function SnapChat(state = initState, action = {}){
 	userDeets: {name: "Sam Okoro"}
 	};
 	case types.CAPTURE:
+		console.log("2");
 	return{
 	...state,
 	captured: true

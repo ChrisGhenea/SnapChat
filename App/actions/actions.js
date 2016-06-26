@@ -8,6 +8,7 @@ export function login() {
 }
 
 export function capture() {
+	console.log("1")
   return {
     type: types.CAPTURE
   };

@@ -41,7 +41,7 @@ export default class CameraComp extends Component {
           <TopBar {...this.props}/>
 
           <View> 
-          <BottomBar {...this.props}/>
+          <BottomBar {...this.props.actions}/>
           </View>
           </View>
         </Camera>

@@ -52,7 +52,7 @@ class RootRouter extends Component {
          if (routeId === 'Dashboard') {
       return (
         <Dashboard
-          {...actions}
+          actions = {actions}
           {...state}
           navigator={navigator} />
       );

@@ -26,8 +26,14 @@ export default class Dashboard extends Component {
   }
 
   render() {
-    return(<View>
-      <Camera {...this.props} style ={{flex:1}}/>
-      </View>);
+    if(!this.props.captured){
+        return(<View>
+          <Camera {...this.props} style ={{flex:1}}/>
+          </View>);}
+        else{
+          return(<View>
+          <Picture {...this.props} style ={{flex:1}}/>
+          </View>);}
+        }
   }
-}       
+      
