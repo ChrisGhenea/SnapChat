@@ -18,8 +18,8 @@ export default class Picture extends Component {
   }
 
   render() {
-    return(<View>
+    return(<Image source={require('./../../images/capturedImg.png')} resizeMode="contain" style={{flex:1}}>
 
-      </View>);
+      </Image>);
   }
 }       
