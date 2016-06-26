@@ -4,14 +4,8 @@ import * as actions from '../actions/actions';
 
 
 const initState ={
-	orders:[],
-	userDeets:[],
-	pendingOrders:[],
-	acceptedOrders:[],
-	dashView: {
-		name:'orders',
-		component:"order"
-	}
+	captured:false,
+
 
 };
 
@@ -29,64 +23,13 @@ export function SnapChat(state = initState, action = {}){
 	...state,
 	userDeets: {name: "Sam Okoro"}
 	};
-	case types.FETCH_DATA:
-	console.log('fetching Data...');
-	
-	return fetchData()
-	
-	case types.VIEW_ORDER:
-	console.log('Orders')
+	case types.CAPTURE:
 	return{
 	...state,
-	dashView: {
-		name:'orders',
-		component:"orders"
-	}
+	captured: true
 	};
-	case types.VIEW_MAP:
-	console.log(state)
-	return{
-	...state,
-	dashView: {
-		name:'Maps',
-		component:"map"
-	}
-	};
-	case types.NAVIGATE:
-	return{
-	...state
-	};
-	case types.ACCEPT_ORDER:
-
-	return{
-	...state
-	}
-	case types.DECLINE_ORDER:
-	return{
 	
-	...state,
-	dashView: {
-		name:'orders',
-		component:"orders"
-	}
-	}
-	case types.CALL_USER:
-	onsole.log('Call User');
-	return{
-	...state
-	};
-	case types.UPDATE_CUSTOMER:
-	return{
-	...state
-	};
-	case types.UPDATE_ORDERS_HOLDER:
-	return{
-	...state
-	};
-	case types.NEW_ORDER:
-	return{
-	...state
-	};
+	
 	default:
 	return state;
 

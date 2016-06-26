@@ -30,14 +30,11 @@ const RouterWithRedux = connect()(Router);
 class RootRouter extends Component {
 	constructor(props) {
     super(props);
-
-    console.log(this.props);
-    
     	
   }
 
  renderScene(route, navigator) {
-    var {state,actions} = this.props
+    var {state,actions} = this.props;
     var routeId = route.id;
     if (routeId === 'chat') {
       return (
