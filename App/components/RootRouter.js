@@ -8,7 +8,7 @@ import {
   View,
   Navigator,
   Text,
-  StatusBar
+  StatusBar,
 } from 'react-native';
 import {Router, Route, Scene, Animations, TabBar} from 'react-native-router-flux';
 
@@ -30,11 +30,14 @@ const RouterWithRedux = connect()(Router);
 class RootRouter extends Component {
 	constructor(props) {
     super(props);
+
+    console.log(this.props);
     
     	
   }
 
  renderScene(route, navigator) {
+    var {state,actions} = this.props
     var routeId = route.id;
     if (routeId === 'chat') {
       return (
@@ -52,7 +55,8 @@ class RootRouter extends Component {
          if (routeId === 'Dashboard') {
       return (
         <Dashboard
-  
+          {...actions}
+          {...state}
           navigator={navigator} />
       );
     }
@@ -93,7 +97,7 @@ class RootRouter extends Component {
       
         <Navigator
         style={{flex: 1}}
-        initialRoute={{id: 'AddMe', name: 'Snaps'}}
+        initialRoute={{id: 'Dashboard', name: 'Dashboard'}}
           renderScene={this.renderScene.bind(this)}
       /></View>
     );
