@@ -22,7 +22,7 @@ export default class Chats extends Component {
 	}
 
 	render() {
-		return(<View>
+		return(<View style={{flex:1, justifyContent:'space-between'}}>
 			<Nav {...this.props} />
 			<Holder />
 			<BottomBit />

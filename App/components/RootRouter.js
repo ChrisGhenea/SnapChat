@@ -41,7 +41,7 @@ class RootRouter extends Component {
         <Chats
          // data = {route.data}
           navigator={navigator}
-          name = "Samuel"
+         {...route.passProps} 
           {...state}
            />
       );
