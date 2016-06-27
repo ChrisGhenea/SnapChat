@@ -12,4 +12,13 @@ export function capture() {
   return {
     type: types.CAPTURE
   };
+
+}
+
+export function close() {
+	console.log("1")
+  return {
+    type: types.CLOSE
+  };
+  
 }

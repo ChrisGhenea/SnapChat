@@ -18,7 +18,9 @@ class Chats extends Component {
 
 	render() {
 		return(<View>
-			<Text>YO</Text>
+			<Nav />
+			<Holder />
+			<BottomBit />
 			</View>);
 	}
 }				

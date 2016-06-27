@@ -8,7 +8,7 @@ import React, {
 
 import {
   View,
-  TouchableHighlight,
+  TouchableOpacity,
   Text,
   Image
 } from 'react-native';
@@ -27,11 +27,11 @@ export default class SnapNav extends Component {
       <Image source={require('./../../images/Talkbubble.png')} style={{margin:10, marginTop:25,}} resizeMode="contain" />
       
       <Image source={require('./../../images/snapchat.png')} style={{margin:10, marginTop:25,}} resizeMode="contain" />
-      <TouchableHighlight onPress={() => {this.props.navigator.replace({
+      <TouchableOpacity onPress={() => {this.props.navigator.replace({
            id: 'Dashboard'
           });}} >
       <Image source={require('./../../images/cameraicon.png')} style={{margin:10, marginTop:25,}} resizeMode="contain" />
-</TouchableHighlight>
+</TouchableOpacity>
       </View>);
   }
 }        

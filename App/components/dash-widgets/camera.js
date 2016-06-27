@@ -5,7 +5,7 @@ import {
   Dimensions,
   StyleSheet,
   Image,
-  TouchableHighlight,
+  TouchableOpacity,
   View
 } from 'react-native';
 import Camera from 'react-native-camera';
@@ -41,7 +41,7 @@ export default class CameraComp extends Component {
           <TopBar {...this.props}/>
 
           <View> 
-          <BottomBar {...this.props.actions}/>
+          <BottomBar {...this.props.actions} {...this.props}/>
           </View>
           </View>
         </Camera>

@@ -29,6 +29,12 @@ export function SnapChat(state = initState, action = {}){
 	...state,
 	captured: true
 	};
+	case types.CLOSE:
+		console.log("2");
+	return{
+	...state,
+	captured: false
+	};
 	
 	
 	default:

@@ -26,7 +26,7 @@ export default class Picture extends Component {
   render() {
     return(
       <Image source={require('./../../images/capturedImg.png')} style={{flex:1, width:null, height:null, justifyContent:'space-between'}}>
-      <TopBar />
+      <TopBar {...this.props.actions} />
       <BottomBar />
       </Image>);
   }
