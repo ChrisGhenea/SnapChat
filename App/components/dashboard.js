@@ -27,11 +27,11 @@ export default class Dashboard extends Component {
 
   render() {
     if(!this.props.captured){
-        return(<View>
+        return(<View style={{flex:1}}>
           <Camera {...this.props} style ={{flex:1}}/>
           </View>);}
         else{
-          return(<View>
+          return(<View style={{flex:1}}>
           <Picture {...this.props} style ={{flex:1}}/>
           </View>);}
         }

@@ -5,10 +5,16 @@ import React, {
   Component,
 } from 'react';
 
+import Icon from 'react-native-vector-icons/FontAwesome';
+import IconI from 'react-native-vector-icons/Ionicons';
+import BottomBar from './picture-bottom';
+import TopBar from './picture-top';
 
 import {
   View,
-  Text
+  Text,
+  Image,
+  PixelRatio
 } from 'react-native';
 
 export default class Picture extends Component {
@@ -18,8 +24,10 @@ export default class Picture extends Component {
   }
 
   render() {
-    return(<Image source={require('./../../images/capturedImg.png')} resizeMode="contain" style={{flex:1}}>
-
+    return(
+      <Image source={require('./../../images/capturedImg.png')} style={{flex:1, width:null, height:null, justifyContent:'space-between'}}>
+      <TopBar />
+      <BottomBar />
       </Image>);
   }
 }       
