@@ -30,7 +30,9 @@ export default class CameraTop extends Component {
           <TouchableHighlight style={{flex: 1,}}>
           <Icon name="flash" style ={{margin:20, marginLeft:0, alignSelf:'center'}} size={30} color="#fff" />
             </TouchableHighlight>
-           <TouchableHighlight style={{flex: 1, }} >
+           <TouchableHighlight style={{flex: 1, }} onPress={() => {this.props.navigator.push({
+           id: 'AddMe'
+          });}} >
           <Icon name="snapchat-ghost" style ={{margin:20, alignSelf:'center'}} size={30} color="#fff" />
           </TouchableHighlight>
            <TouchableHighlight style={{flex: 1,}} >
