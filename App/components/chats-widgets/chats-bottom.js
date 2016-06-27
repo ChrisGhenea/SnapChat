@@ -36,7 +36,7 @@ export default class ChatBottom extends Component {
     placeholder="Send a Chat"
     value={this.state.text}
       />
-      <TouchableOpacity style={{flex:2}} onPress={() => this.props.navigator.pop()}>
+      <TouchableOpacity style={{flex:2}} >
       <View style={{flex:1, alignItems:'center', justifyContent:'center',borderRadius:10, margin:5, backgroundColor:'#3cb2e2'}}>
       <IconI name="blur-circular" size={30} color="#fff"/>
       </View>

@@ -59,7 +59,10 @@ export default class RecentHolder extends Component {
   }
 
   render() {
-    return(<View style={{flex:3}} />
+    return(<View style={{flex:3}}>
+      <Text style={{color:"#9B55A0", alignSelf:'center', fontSize:12, fontWeight:"600", margin:13}}>
+      RECENT UPDATES </Text>
+      </View>
       );
   }
 }        

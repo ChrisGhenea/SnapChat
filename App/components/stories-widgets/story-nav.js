@@ -22,7 +22,7 @@ export default class StoriesNav extends Component {
 
   render() {
     return(
-      <View style={{flex:1, backgroundColor:'#fff', flexDirection:'row', justifyContent:'space-between'}}>
+      <View style={{height:60, backgroundColor:'#fff', flexDirection:'row', justifyContent:'space-between', borderBottomWidth:1, borderColor:'#F2F2F2',}}>
       <TouchableOpacity onPress={() => {this.props.navigator.replace({
            id: 'Dashboard'
           });}} >

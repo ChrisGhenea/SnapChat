@@ -11,7 +11,8 @@ import {
   TouchableHighlight,
   Text,
   Image,
-  ListView
+  ListView,
+  ScrollView
 } from 'react-native';
 
 import Live from "./live-row"
@@ -66,9 +67,11 @@ export default class StoryHolder extends Component {
   render() {
     return(<Image source={require('./../../images/snapsBackground.png')} style={{flex:9}} resizeMode="contain">
       <Search />
+      <ScrollView>
       <Discover />
       <Live />
       <Recent />
+      </ScrollView>
 
 
 

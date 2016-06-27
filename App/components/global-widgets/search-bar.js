@@ -25,7 +25,7 @@ export default class Search extends Component {
 
   render() {
     return(
-      <View style={{flexDirection:'row', height:40, borderBottomWidth:1, borderColor:'#eee',  justifyContent:'space-between'}}>
+      <View style={{flexDirection:'row', height:50, borderBottomWidth:1, borderColor:'#eee',  justifyContent:'space-between'}}>
       <Image source ={require('./../../images/search.png')} resizeMode="contain" style={{margin:8, height:20, width:20, alignSelf:'center'}}/>
       <TextInput 
       style={{flex:8, margin:8 }}
