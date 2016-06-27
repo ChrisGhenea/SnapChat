@@ -34,7 +34,7 @@ export default class PictureTop extends Component {
             </View>
             <View  style={{flexDirection:'row',}}>
            <TouchableHighlight style={{flex: 1, }} >
-          <IconI name="note" style ={{margin:20,marginLeft:0, alignSelf:'center'}} size={30} color="#fff" />
+          <IconI name="tag-faces" style ={{margin:20,marginLeft:0, alignSelf:'center'}} size={30} color="#fff" />
           </TouchableHighlight>
            <TouchableHighlight style={{flex: 1,}} >
           <IconI name="format-size" style ={{margin:20,marginLeft:0, alignSelf:'center'}} size={35} color="#fff" />
