@@ -37,7 +37,7 @@ export default class PictureTop extends Component {
           <IconI name="note" style ={{margin:20,marginLeft:0, alignSelf:'center'}} size={30} color="#fff" />
           </TouchableHighlight>
            <TouchableHighlight style={{flex: 1,}} >
-          <IconI name="title" style ={{margin:20,marginLeft:0, alignSelf:'center'}} size={35} color="#fff" />
+          <IconI name="format-size" style ={{margin:20,marginLeft:0, alignSelf:'center'}} size={35} color="#fff" />
           </TouchableHighlight>
            <TouchableHighlight style={{flex: 1,}} >
           <IconI name="colorize" style ={{margin:20,marginLeft:0, alignSelf:'center'}} size={35} color="#fff" />
