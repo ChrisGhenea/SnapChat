@@ -8,7 +8,7 @@ import React, {
 
 import {
   View,
-  TouchableHighlight,
+  TouchableOpacity,
   Text,
   Image,
   StyleSheet,
@@ -64,7 +64,7 @@ export default class SnapHolder extends Component {
 
   render() {
     return(
-      <View style={{flexDirection:'row', flex:1, borderBottomWidth:1, padding:10, borderColor:'#eee',  justifyContent:'space-between'}}>
+      <TouchableOpacity onPress={() => this.props.navigator.push({id:'chat', name:"Sam"})}style={{flexDirection:'row', flex:1, borderBottomWidth:1, padding:10, borderColor:'#eee',  justifyContent:'space-between'}}>
      <View style={{flexDirection:'row', flex:2,  justifyContent:'space-between'}}>
      {this.generateImage(this.props.data.dataType)}
       <Text style={{alignSelf:'center', textAlign:"right", fontSize:14}}> {this.props.data.name} </Text>
@@ -72,7 +72,7 @@ export default class SnapHolder extends Component {
       <View style={{flex:2}} />
 
 
-      </View>
+      </TouchableOpacity>
       );
   }
 } 

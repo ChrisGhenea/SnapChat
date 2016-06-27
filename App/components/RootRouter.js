@@ -40,7 +40,10 @@ class RootRouter extends Component {
       return (
         <Chats
          // data = {route.data}
-          navigator={navigator} />
+          navigator={navigator}
+          name = "Samuel"
+          {...state}
+           />
       );
     }
     if (routeId === 'AddMe') {

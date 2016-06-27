@@ -21,6 +21,7 @@ import Search from "./../global-widgets/search-bar"
 export default class SnapHolder extends Component {
   constructor(props){
     super(props)
+     console.log(this.props)
     var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     var snapsSample = [
     {
@@ -67,7 +68,7 @@ export default class SnapHolder extends Component {
       <ListView
         dataSource={this.state.dataSource}
         style = {{flex:12}}
-        renderRow={(rowData) => <EachSnap data = {rowData} />}
+        renderRow={(rowData) => <EachSnap {...this.props} data = {rowData} />}
                     />
 
 
