@@ -5,6 +5,7 @@ import {
   Dimensions,
   StyleSheet,
   Image,
+  Text,
   TouchableOpacity,
   View
 } from 'react-native';
@@ -39,7 +40,7 @@ export default class CameraComp extends Component {
           >
           <View style={{flex:1, justifyContent:'space-between'}}>
           <TopBar {...this.props}/>
-
+          <View style={{height:40, backgroundColor:'#333', alignSelf:'center', justifyContent:'center', padding:10}}><Text style={{color:'#fff'}}>Camera Background Works on Device</Text></View>
           <View> 
           <BottomBar {...this.props.actions} {...this.props}/>
           </View>

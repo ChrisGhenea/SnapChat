@@ -29,9 +29,9 @@ export default class ChatBottom extends Component {
 
   render() {
     return(
-      <View style={{height:50, backgroundColor:'#fff', borderBottomWidth:1, borderBottomColor:'#f1f2f2', flexDirection:'row', justifyContent:'space-between'}}>
+      <View style={{height:50, borderTopWidth:1, borderTopColor:'#f1f2f2', backgroundColor:'#fff', borderBottomWidth:1, borderBottomColor:'#f1f2f2', flexDirection:'row', justifyContent:'space-between'}}>
       <TextInput 
-      style={{flex:8, margin:8 }}
+      style={{flex:9, margin:8 }}
     onChangeText={(text) => this.setState({text})}
     placeholder="Send a Chat"
     value={this.state.text}
